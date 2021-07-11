@@ -10,4 +10,4 @@ Generate Pyrogram String Session Using this bot.
 
 ## Deploy To Heroku
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/BX_Bots/string-session-generator-bot/tree/main)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/BXBots/string-session-generator-bot/tree/main)
