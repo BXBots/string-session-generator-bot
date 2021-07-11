@@ -14,15 +14,15 @@ from pyrogram.errors import (
 )
 
 
-API_TEXT = """🙋‍♂ Hi {},
+API_TEXT = """Hai {},
 
-I am a String Session generator bot.
+`I am a String Session generator bot`.
 
-For generating string session send me your `API_ID` 🐿
+`For generating string session send me your` `API_ID`
 """
-HASH_TEXT = "Ok Now Send your `API_HASH` to Continue.\n\nPress /cancel to Cancel.🐧"
+HASH_TEXT = "Ok Now Send your `API_HASH` to Continue.\n\nPress /cancel to Cancel."
 PHONE_NUMBER_TEXT = (
-    "📞__ Now send your Phone number to Continue"
+    "☎️ Now send your Phone number to Continue"
     " include Country code.__\n**Eg:** `+13124562345`\n\n"
     "Press /cancel to Cancel."
 )
@@ -195,15 +195,12 @@ async def help_cb(c, m, cb=True):
 
 >>>> (If you have two step verification send to bot if bot ask.)
 
-
-**NOTE:**
-
-If you made any mistake anywhere press /cancel and then press /start
+👲 ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ : [ʙx ʙᴏᴛᴢ](https://t.me/BX_Botz)
 """
 
     buttons = [[
-        InlineKeyboardButton('📕 About', callback_data='about'),
-        InlineKeyboardButton('❌ Close', callback_data='close')
+        InlineKeyboardButton('🔰About', callback_data='about'),
+        InlineKeyboardButton('🔐Close', callback_data='close')
     ]]
     if cb:
         await m.answer()
@@ -220,28 +217,27 @@ async def about(c, m):
 @Client.on_callback_query(filters.regex('^about$'))
 async def about_cb(c, m, cb=True):
     me = await c.get_me()
-    about_text = f"""**MY DETAILS:**
+    about_text = f"""
+🤖 **Bot** : Telegraph Uploader
 
-__🤖 My Name:__ {me.mention(style='md')}
-    
-__📝 Language:__ [Python3](https://www.python.org/)
+👨‍💻 **Developer** : [ᴍʜᴅ ᴍᴜꜰᴀz](https://telegram.me/Mufaz123)
 
-__🧰 Framework:__ [Pyrogram](https://github.com/pyrogram/pyrogram)
+📢 **Channel** : @BX_Botz
 
-__👨‍💻 Developer:__ [𝐀𝐧𝐨𝐧𝐲𝐦𝐨𝐮𝐬](https://t.me/Ns_AnoNymouS)
+👥 **Group** : @BXSupport
 
-__📢 Channel:__ [NS BOT UPDATES](https://t.me/Ns_bot_updates)
+🌐 **Source** : [Click here](https://t.me/nokiyirunnoippokitum)
 
-__👥 Group:__ [Ns BOT SUPPORT](https://t.me/Ns_Bot_supporters)
+📝 **Language** : [Python](https://python.org/)
 
-__🌐 Source Code:__ [Press Me 😋](https://github.com/Ns-AnoNymouS/string-session-generator-bot)
+📚 **Library** : [Pyrogram v1.2.0](https://pyrogram.org/)
 
-__🚀 YouTube Channel:__ [Ns Bots](https://youtube.com/channel/UC9NnqJ63aSzv457iUMM06vQ)
+💈**Server** : [Heroku](https://heroku.com/)
 """
 
     buttons = [[
-        InlineKeyboardButton('💡 Help', callback_data='help'),
-        InlineKeyboardButton('❌ Close', callback_data='close')
+        InlineKeyboardButton('🔰Help', callback_data='help'),
+        InlineKeyboardButton('🔐Close', callback_data='close')
     ]]
     if cb:
         await m.answer()
@@ -258,7 +254,7 @@ async def close(c, m):
 
 async def is_cancel(msg: Message, text: str):
     if text.startswith("/cancel"):
-        await msg.reply("⛔ Process Cancelled.")
+        await msg.reply("🚫Process Cancelled.")
         return True
     return False
 
